@@ -1,0 +1,29 @@
+/*
+#####################################################################
+LAKER Version 1.1 – http://www.lakercompendium.com
+#####################################################################
+#####################################################################
+All fonts will be included here. For demo purposes, "Oswald" and 
+"PTSerif" from the the Google Font Directory 
+(http://www.google.com/webfonts/) are included. 
+#####################################################################
+#####################################################################
+#####################################################################
+*/
+
+/*################################### "Oswald" for headlines ############################*/
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Oswald';
+    src: url('../fonts/oswald/oswald-webfont.eot');
+    src: url('../fonts/oswald/oswald-webfont.eot?#iefix') format('eot'), url('../fonts/oswald/oswald-webfont.woff') format('woff'), url('../fonts/oswald/oswald-webfont.ttf') format('truetype'), url('../fonts/oswald/oswald-webfont.svg#webfont1Pz3m7lF') format('svg');
+}
+/*################################### Copy text PTSerif ############################*/
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'PTSerifRegular';
+    src: url('../fonts/ptserif/pt_serif-web-regular-webfont.eot');
+    src: url('../fonts/ptserif/pt_serif-web-regular-webfont.eot?iefix') format('eot'), url('../fonts/ptserif/pt_serif-web-regular-webfont.woff') format('woff'), url('../fonts/ptserif/pt_serif-web-regular-webfont.ttf') format('truetype'), url('../fonts/ptserif/pt_serif-web-regular-webfont.svg#webfontUKUF9e5Z') format('svg');
+}

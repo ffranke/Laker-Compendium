@@ -1,0 +1,247 @@
+/*
+#####################################################################
+LAKER Version 1.1 – http://www.lakercompendium.com
+#####################################################################
+#####################################################################
+This file contains a modified version of the LESS CSS Framework
+(http://www.lessframework.com). 
+
+See www.lakercompendium.com for more details.
+#####################################################################
+#####################################################################
+#####################################################################
+*/
+@charset "UTF-8";
+/*	Imports
+	------	*/
+@import url('fonts.css');
+@import url('typography.css');
+@import url('structure.css');
+@import url('media.css');
+@import url('nav.css');
+@import url('soundbox.css');
+@import url('slideshow.css');
+@import url('card-flip.css');
+
+/*Turn on the visual grid view, by deleting the "/*"...
+@import url('display-grid.css');
+*/
+
+
+/*	Less Framework 4
+	http://lessframework.com
+	by Joni Korpi
+	License: http://creativecommons.org/licenses/MIT/	*/
+	
+/*	Resets
+	------	*/
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,hr,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figure,figcaption,hgroup,menu,footer,header,nav,section,summary,time,mark,audio,video {     }
+
+img::-moz-selection {    background: transparent }
+img::selection {    background: transparent }
+
+article,aside,canvas,figure,figure img,figcaption,hgroup,footer,header,nav,section,audio,video {    display: block }
+a img {    border: 0 }
+body {    overflow-x: hidden }
+
+
+.dossier-headline-arrow {
+    position: relative;
+    margin-top: -38px; margin-bottom: -15px; margin-left: 371px;
+	z-index: 10
+}
+.dossier-headline-arrow img {
+    width: 30px; height: 30px
+}
+
+/* Selection colours (easy to forget) */
+::selection {    background: #d3f9f2 }
+::-moz-selection {    background: #d3f9f2 }
+body {
+    margin: auto;
+    -webkit-tap-highlight-color: #d3f9f2
+}
+
+
+/*
+##########################################################################
+##########################################################################
+		Default Layout: 952px.
+		Content-Element width: 952px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Leftover space for scrollbars @1024px: 32px.
+##########################################################################
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    
+##########################################################################
+##########################################################################
+*/
+
+body {
+    width: 952px;
+    padding: 0px;
+    background-color: #fff; color: rgb(60,60,60);
+    -webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
+}
+
+.portrait {    display: none }
+.browser-only {    display: block }
+.ipad-only,
+.iphone-only,
+.ios-only {    display: none }
+
+
+/*
+##########################################################################
+##########################################################################
+		Tablet Layout: 768px.
+		Content-Element width: 712px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    
+##########################################################################
+##########################################################################
+*/
+
+@media only screen and (min-width: 768px) and (max-width: 991px) { 
+	body {
+	    width: 768px;
+	    padding-right: 0px; padding-bottom: 0px; padding-left: 0px !important;
+	    margin: auto
+	}
+	
+	.dossier-headline-arrow {  margin-left: 279px; }
+	
+}
+
+
+/*
+##########################################################################
+##########################################################################
+		iPad Layout Portrait: 768px.
+		Content-Element width: 712px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712   
+##########################################################################
+##########################################################################
+ */
+ 
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) { 
+	body {
+	    width: 100%;
+	    margin: 0px; padding: 0px
+	}
+	.portrait {    display: block }
+	.landscape {    display: none }
+	.browser-only {    display: none }
+	.ipad-only,
+	.ios-only {    display: block }
+}
+
+
+/*
+##########################################################################
+##########################################################################
+		iPad Layout Landscape: 1024px.
+		Content-Element width: 896px.
+		Gutters: 24px.
+		Outer content margins: 64px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    
+##########################################################################
+##########################################################################
+*/
+
+@media only screen and (max-device-width: 1024px) and (orientation:landscape) { 
+	body {
+	    width: 100%;
+	    margin: auto; padding: 0px
+	}
+	.portrait {    display: none }
+	.landscape {    display: block }
+	.browser-only {    display: none }
+	.ipad-only,
+	.ios-only {    display: block }
+	.dossier-headline-arrow {  margin-left: 405px; }
+}
+
+
+/*
+##########################################################################
+##########################################################################
+		Mobile Layout: 320px.
+		Content-Element width: 292px.
+		Gutters: 24px.
+		Outer content margins: 14px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3
+px      68    160    252    
+##########################################################################
+##########################################################################
+*/
+
+@media only screen and (max-width: 767px) { 
+	body {
+	    width: 320px;
+	    margin: auto; padding: 0px
+	}
+	.portrait {    display: block }
+	.landscape {    display: none }
+	.browser-only,
+	ipad-only {    display: none }
+	.iphone-only,
+	.ios-only {    display: block }
+	.dossier-headline-arrow {    margin-left: 145px }
+}
+
+
+/*		
+##########################################################################
+##########################################################################
+		Wide Mobile Layout: 480px.
+		Content-Element width: 436px.
+		Gutters: 24px.
+		Outer content margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+#########################################################################
+cols    1     2      3      4      5
+px      68    160    252    344    436    
+##########################################################################
+##########################################################################
+*/
+
+@media only screen and (min-width: 480px) and (max-width: 767px) { 
+	body {
+	    width: 480px;
+	    padding: 0px
+	}
+	.portrait {    display: none }
+	.landscape {    display: block }
+	.dossier-headline-arrow {    margin-left: 225px }
+}
+
+
+/*		
+##########################################################################
+##########################################################################
+	Retina media query.
+	Overrides styles for devices with a 
+	device-pixel-ratio of 2+, such as iPhone 4.
+######################################################################### 
+##########################################################################
+*/
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { 
+	
+}

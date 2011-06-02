@@ -1,0 +1,293 @@
+/*
+#####################################################################
+LAKER Version 1.1 – http://www.lakercompendium.com
+#####################################################################
+#####################################################################
+This file contains a modified version of the LESS CSS Framework
+(http://www.lessframework.com). 
+
+See www.lakercompendium.com for more details.
+#####################################################################
+#####################################################################
+#####################################################################
+*/
+@charset "UTF-8";
+/*	Structure presets
+	------------------	*/
+
+
+/*
+##########################################################################
+##########################################################################
+		Default Layout: 952px.
+		Content-Element width: 952px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Leftover space for scrollbars @1024px: 32px.
+##########################################################################
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    
+##########################################################################
+##########################################################################
+*/
+
+.small-column,
+.medium-column,
+.full-column {
+    position: relative; float: left;
+    margin-right: 24px;
+}
+
+.small-column {     clear:both; width: 160px; }
+.medium-column {    width: 436px; }
+.full-column {    width: 896px }
+
+
+
+.content-element {
+   	margin-bottom: 0px;
+    margin-right: 28px; margin-left: 28px;
+	overflow:hidden;
+}
+
+
+
+
+.media-right,
+.media-left {
+	width: 344px; height: auto;
+    padding-bottom: 15px;
+	}
+
+.media-right {
+    float: right;
+    margin-right: -184px; margin-left: 24px
+}
+.media-left {
+    float: left;
+    margin-right: 24px; margin-left: -184px
+}
+
+.starting-headline {
+    width: 712px;
+    padding-top: 40px;
+    background-color: #fff;
+	clear:both;
+}
+
+.large-column {
+    width: 712px;
+}
+
+.float-right {   margin-right:0px;  float: right; }
+.float-left {    margin-left:0px; float: left; }
+
+
+.dossier-start-bg {
+    height: 648px;
+    padding-top: 120px;
+    background-color: #efefef;
+    background-image: url(../../images/dossier-zuvielaltes/dossier-start.jpg);
+    background-size: cover;
+    -moz-background-size: cover;
+    background-repeat: no-repeat;
+}
+.footer {
+    width: 100%;
+    clear: both;
+	padding-top:20px;
+}
+
+
+/*
+##########################################################################
+##########################################################################
+		Tablet Layout: 768px.
+		Content-Element width: 712px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    
+##########################################################################
+##########################################################################
+*/
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) { 
+	.content-element {
+	    width: 712px;
+	    margin-right: 28px; margin-left: 28px;
+	    margin: auto;
+	    overflow: hidden
+	}
+	.large-column {
+	    width: 528px
+	}
+
+	
+	.starting-headline {
+    width: 528px;
+  	}
+
+	
+	.full-column {
+	    position: relative; float: left;
+	    width: 100%;
+	    margin-right: 24px
+	}
+	
+	.media-right,
+	.media-left { width: 252px;  }
+	.medium-column { width:344px;}
+}
+
+
+/*
+##########################################################################
+##########################################################################
+		iPad Layout Portrait: 768px.
+		Content-Element width: 712px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712   
+##########################################################################
+##########################################################################
+ */
+ 
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) { 
+	.dossier-start-bg {    height: 904px }
+	.medium-column { width:344px;}
+}
+
+
+/*
+##########################################################################
+##########################################################################
+		iPad Layout Landscape: 1024px.
+		Content-Element width: 896px.
+		Gutters: 24px.
+		Outer content margins: 64px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    
+##########################################################################
+##########################################################################
+*/
+
+
+@media only screen and (max-device-width: 1024px) and (orientation:landscape) { 
+	.content-element {
+	    width: 896px;
+	    margin: auto; padding: 0px !important
+	}
+	.large-column {
+	    width: 712px
+	}
+	
+	
+	.starting-headline {
+    width: 712px;
+  	}
+	
+	
+	.dossier-start-bg {    height: 648px }
+	
+	.medium-column { width:436px;}
+	
+}
+
+
+/*
+##########################################################################
+##########################################################################
+		Mobile Layout: 320px.
+		Content-Element width: 292px.
+		Gutters: 24px.
+		Outer content margins: 14px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3
+px      68    160    252    
+##########################################################################
+##########################################################################
+*/
+
+
+@media only screen and (max-width: 767px) { 
+	.content-element {
+	    width: 292px;
+	    margin-right: 14px; margin-left:14px; padding:0px;
+	}
+	.large-column,
+	.starting-headline {
+	    float: none;
+	    width: 100%
+	}
+	.dossier-start-bg {    height: 360px }
+	.small-column,
+	.medium-column,
+	.full-column {
+	    float: none;
+	    width: 100%;
+	    margin-right: 0px;
+	    padding: 0px
+	}
+	.float-right,
+	.float-left	 {
+		float:none;
+	}
+	
+	.media-left,
+	.media-right {    width: 100%; margin:0px; }
+	
+}
+
+
+/*		
+##########################################################################
+##########################################################################
+		Wide Mobile Layout: 480px.
+		Content-Element width: 436px.
+		Gutters: 24px.
+		Outer content margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+#########################################################################
+cols    1     2      3      4      5
+px      68    160    252    344    436    
+##########################################################################
+##########################################################################
+*/
+
+
+@media only screen and (min-width: 480px) and (max-width: 767px) { 
+	.content-element {
+	    width: 436px;
+	    margin: auto;
+	}
+	.dossier-start-bg {
+	    height: 260px;
+	    padding-top: 60px
+	}
+}
+
+
+/*		
+##########################################################################
+##########################################################################
+	Retina media query.
+	Overrides styles for devices with a 
+	device-pixel-ratio of 2+, such as iPhone 4.
+######################################################################### 
+##########################################################################
+*/
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { 
+	
+}

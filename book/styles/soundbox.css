@@ -1,0 +1,179 @@
+/*
+#####################################################################
+LAKER Version 1.1 – http://www.lakercompendium.com
+#####################################################################
+#####################################################################
+This file contains a modified version of jplayer CSS
+(http://www.jplayer.org). 
+
+See www.lakercompendium.com for more details.
+#####################################################################
+#####################################################################
+#####################################################################
+*/
+@charset "UTF-8";
+
+
+
+/*
+##########################################################################
+##########################################################################
+		Default Layout: 952px.
+		Content-Element width: 952px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Leftover space for scrollbars @1024px: 32px.
+##########################################################################
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    
+##########################################################################
+##########################################################################
+*/
+.sound-box,
+.sound-box-active {
+    margin-bottom: 15px;
+    padding-top: 90px !important;
+    padding: 18px;
+    background-color: #77f9ae; color: #000;
+    background-image: url('../images/loudspeaker-symbol.png');
+    background-repeat: no-repeat;
+    background-position: 18px 18px;
+}
+.sound-box-active p {    color: #fff }
+.sound-box p,
+.sound-box-active p {
+    color: #000;
+    font-size: 1em;
+    font-family: 'PTSerifRegular';
+    line-height: 1.2em !important;
+}
+.sound-box-active {
+    background-color: #000; color: #fff;
+    background-image: url('../images/loudspeaker-symbol-active.gif')
+}
+.sound-box-active p{
+	color: #fff;	
+	}
+	
+.jp-audio a:link,
+.jp-audio a:visited {
+    color: #000;
+    text-decoration: none
+}
+
+
+
+/*
+##########################################################################
+##########################################################################
+		Tablet Layout: 768px.
+		Content-Element width: 712px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    
+##########################################################################
+##########################################################################
+*/
+
+
+/*
+##########################################################################
+##########################################################################
+		iPad Layout Portrait: 768px.
+		Content-Element width: 712px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712   
+##########################################################################
+##########################################################################
+ */
+ 
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) { 
+	.sound-box,
+	.sound-box-active {    margin-top: -15px }
+}
+
+
+/*
+##########################################################################
+##########################################################################
+		iPad Layout Landscape: 1024px.
+		Content-Element width: 896px.
+		Gutters: 24px.
+		Outer content margins: 64px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    
+##########################################################################
+##########################################################################
+*/
+
+
+@media only screen and (max-device-width: 1024px) and (orientation:landscape) { 
+	.sound-box,
+	.sound-box-active {    margin-top: -15px }
+}
+
+
+/*
+##########################################################################
+##########################################################################
+		Mobile Layout: 320px.
+		Content-Element width: 292px.
+		Gutters: 24px.
+		Outer content margins: 14px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3
+px      68    160    252    
+##########################################################################
+##########################################################################
+*/
+
+
+@media only screen and (max-width: 767px) { 
+	
+}
+
+
+/*		
+##########################################################################
+##########################################################################
+		Wide Mobile Layout: 480px.
+		Content-Element width: 436px.
+		Gutters: 24px.
+		Outer content margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+#########################################################################
+cols    1     2      3      4      5
+px      68    160    252    344    436    
+##########################################################################
+##########################################################################
+*/
+
+@media only screen and (min-width: 480px) and (max-width: 767px) { 
+	
+}
+
+
+/*		
+##########################################################################
+##########################################################################
+	Retina media query.
+	Overrides styles for devices with a 
+	device-pixel-ratio of 2+, such as iPhone 4.
+######################################################################### 
+##########################################################################
+*/
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { 
+	
+}

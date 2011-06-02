@@ -1,0 +1,241 @@
+/*
+#####################################################################
+LAKER Version 1.1 – http://www.lakercompendium.com
+#####################################################################
+#####################################################################
+This file contains a modified version of the LESS CSS Framework
+(http://www.lessframework.com). 
+
+See www.lakercompendium.com for more details.
+#####################################################################
+#####################################################################
+#####################################################################
+*/
+@charset "UTF-8";
+
+
+/*
+##########################################################################
+##########################################################################
+		Default Layout: 952px.
+		Content-Element width: 952px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Leftover space for scrollbars @1024px: 32px.
+##########################################################################
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    
+##########################################################################
+##########################################################################
+*/
+
+h1,
+h2,
+h3,
+h4,
+p,
+body {
+    margin: 0px; padding: 0px;
+    font-weight: normal;
+    font-family: 'PTSerifRegular'
+}
+.content-element h1 {
+    margin-bottom: 30px;
+	margin-top:20px;
+    color: #1c1c1c;
+    font-size: 3em;
+    font-family: 'Oswald';
+    line-height: 1.1em;
+	clear:both;
+}
+
+.content-element h2 {
+    margin-bottom: 10px;
+	margin-top:20px;
+    color: #1c1c1c;
+    font-size: 1.8em;
+    font-family: 'Oswald';
+    line-height: 1.1em;
+}
+p {
+    display: block;
+    margin-bottom: 15px;
+    color: #555555;
+    font-size: 1.188em;
+    line-height: 1.50em;
+}
+li {
+    color: #555555;
+    font-size: 1.188em;
+    line-height: 1.50em !important
+}
+
+a:link, a:visited, a:hover {
+	color:#77f9ae;
+	}
+	
+.content-element a {
+	color:#000;
+	text-decoration:none;
+	border-bottom:1px solid #77f9ae;
+	}
+
+.dossier-number {
+    position: absolute;
+    width: 82px; height: 138px;
+    margin-top: 0px; margin-left: 28px;
+    text-align: center;
+    background-image: url(../images/dossier-number-bg.png);
+    z-index: 1000;
+    opacity: 1;
+}
+.dossier-number p {
+    margin-left: -8px;
+    padding-top: 48px;
+    color: #fff;
+    font-size: 2.6em;
+    font-family: 'Oswald'
+}
+.footer p {
+    color: #c7c7c7;
+    font-size: 0.9em
+}
+.
+
+
+
+/*
+##########################################################################
+##########################################################################
+		Tablet Layout: 768px.
+		Content-Element width: 712px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    
+##########################################################################
+##########################################################################
+*/
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) { 
+
+}
+
+
+/*
+##########################################################################
+##########################################################################
+		iPad Layout Portrait: 768px.
+		Content-Element width: 712px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712   
+##########################################################################
+##########################################################################
+ */
+ 
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) { 
+	
+}
+
+
+/*
+##########################################################################
+##########################################################################
+		iPad Layout Landscape: 1024px.
+		Content-Element width: 896px.
+		Gutters: 24px.
+		Outer content margins: 64px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    
+##########################################################################
+##########################################################################
+*/
+
+
+@media only screen and (max-device-width: 1024px) and (orientation:landscape) { 
+	.dossier-number {    margin-left: 64px }
+}
+
+
+/*
+##########################################################################
+##########################################################################
+		Mobile Layout: 320px.
+		Content-Element width: 292px.
+		Gutters: 24px.
+		Outer content margins: 14px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3
+px      68    160    252    
+##########################################################################
+##########################################################################
+*/
+
+
+@media only screen and (max-width: 767px) { 
+	.content-element h1 {
+	    margin-bottom: 20px;
+	    font-size: 2.2em
+	}
+	p { line-height: 1.40em }
+	.dossier-number {
+	    width: 60px; height: 100px;
+	    margin-top: -8px; margin-left: 14px;
+	    background-size: 60px 100px
+	}
+	.dossier-number p {
+	    margin-left: -7px;
+	    padding-top: 30px;
+	    font-size: 2em
+	}
+}
+
+
+/*		
+##########################################################################
+##########################################################################
+		Wide Mobile Layout: 480px.
+		Content-Element width: 436px.
+		Gutters: 24px.
+		Outer content margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+#########################################################################
+cols    1     2      3      4      5
+px      68    160    252    344    436    
+##########################################################################
+##########################################################################
+*/
+
+@media only screen and (min-width: 480px) and (max-width: 767px) { 
+	.dossier-number {
+	    width: 60px; height: 100px;
+	    margin-top: -8px; margin-left: 22px;
+	    background-size: 60px 100px
+	}
+}
+
+
+/*		
+##########################################################################
+##########################################################################
+	Retina media query.
+	Overrides styles for devices with a 
+	device-pixel-ratio of 2+, such as iPhone 4.
+######################################################################### 
+##########################################################################
+*/
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { 
+	
+}

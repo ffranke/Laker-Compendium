@@ -1,0 +1,209 @@
+/*
+#####################################################################
+LAKER Version 1.1 – http://www.lakercompendium.com
+#####################################################################
+#####################################################################
+Styles the image scroller. on iOS devices image can be "swiped", on 
+desktop browsers images are displayed one after another.
+
+Based on the image scroller technique by 
+http://labs.skinkers.com/touchSwipe/
+#####################################################################
+#####################################################################
+#####################################################################
+*/
+@charset "UTF-8";
+
+
+/*
+##########################################################################
+##########################################################################
+		Default Layout: 952px.
+		Content-Element width: 952px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Leftover space for scrollbars @1024px: 32px.
+##########################################################################
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    
+##########################################################################
+##########################################################################
+*/
+
+#imgscroll-content {
+    position: relative;
+    width: 100%; height: auto;
+    margin-top: 0px; margin-bottom: 120px;
+    overflow: hidden
+}
+#imgscroll-legend {
+    display: none;
+    margin-bottom: 0px;
+    background-color: #77f9ae
+}
+#imgscroll-legend p {
+    margin-bottom: 0px;
+    padding: 10px;
+    color: #000;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-family: "PTSerifBold"
+}
+#imgscroll-imgs {
+    display: inline; float: left;
+    width: 100%;
+    margin: 0px; padding: 0px;
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    /*apply a transfor to kick in the hardware acceleration.  Without this, the first time we add the transform you get odd rendering of the divs (half missing) */
+    -webkit-transform: translate3d(0px,0px,0px);
+}
+#imgscroll-img {
+    display: inline; float: left;
+    width: 100%; height: auto;
+    /*apply a transfor to kick in the hardware acceleration.  Without this, the first time we add the transform you get odd rendering of the divs (half missing) */
+    -webkit-transform: translate3d(0px,0px,0px);
+}
+#imgscroll-img img {
+    display: inline;
+    width: 100%
+}
+
+
+/*
+##########################################################################
+##########################################################################
+		Tablet Layout: 768px.
+		Content-Element width: 712px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    
+##########################################################################
+##########################################################################
+*/
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) { 
+	
+}
+
+
+/*
+##########################################################################
+##########################################################################
+		iPad Layout Portrait: 768px.
+		Content-Element width: 712px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712   
+##########################################################################
+##########################################################################
+ */
+ 
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) { 
+	#imgscroll-legend {    display: block }
+	#imgscroll-imgs {    width: 4000% }
+	#imgscroll-img {
+	    float: left;
+	    width: 768px !important
+	}
+}
+
+
+/*
+##########################################################################
+##########################################################################
+		iPad Layout Landscape: 1024px.
+		Content-Element width: 896px.
+		Gutters: 24px.
+		Outer content margins: 64px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    
+##########################################################################
+##########################################################################
+*/
+
+
+@media only screen and (max-device-width: 1024px) and (orientation:landscape) { 
+	#imgscroll-legend {    display: block }
+	#imgscroll-imgs {    width: 4000% }
+	#imgscroll-img {
+	    float: left;
+	    width: 1024px !important
+	}
+}
+
+
+/*
+##########################################################################
+##########################################################################
+		Mobile Layout: 320px.
+		Content-Element width: 292px.
+		Gutters: 24px.
+		Outer content margins: 14px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3
+px      68    160    252    
+##########################################################################
+##########################################################################
+*/
+
+
+@media only screen and (max-width: 767px) { 
+	#imgscroll-legend {    display: block }
+	#imgscroll-content {    margin-bottom: 50px }
+	#imgscroll-imgs {    width: 4000% }
+	#imgscroll-img {
+	    float: left;
+	    width: 320px !important
+	}
+}
+
+
+/*		
+##########################################################################
+##########################################################################
+		Wide Mobile Layout: 480px.
+		Content-Element width: 436px.
+		Gutters: 24px.
+		Outer content margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+#########################################################################
+cols    1     2      3      4      5
+px      68    160    252    344    436    
+##########################################################################
+##########################################################################
+*/
+
+@media only screen and (min-width: 480px) and (max-width: 767px) { 
+	#imgscroll-img {
+	    float: left;
+	    width: 480px !important
+	}
+}
+
+
+/*		
+##########################################################################
+##########################################################################
+	Retina media query.
+	Overrides styles for devices with a 
+	device-pixel-ratio of 2+, such as iPhone 4.
+######################################################################### 
+##########################################################################
+*/
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) { 
+	body {     }
+}

@@ -1,0 +1,475 @@
+/*
+#####################################################################
+LAKER Version 1.1 – http://www.lakercompendium.com
+#####################################################################
+#####################################################################
+Styles for the navigation bar and the table of content on iOS devices
+and desktop screens.
+#####################################################################
+#####################################################################
+#####################################################################
+*/
+@charset "UTF-8";
+
+
+/*
+##########################################################################
+##########################################################################
+		Default Layout: 952px.
+		Content-Element width: 952px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Leftover space for scrollbars @1024px: 32px.
+##########################################################################
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    
+##########################################################################
+##########################################################################
+*/
+
+/*
+#####################################################################
+Navigation bar
+#####################################################################
+*/
+.nav-bar {
+    position: fixed;
+    top: 0; left: 0px;
+    width: 100%; height: 30px;
+    margin-top: 0px; margin-bottom: 0px;
+    background-color: #000;
+    opacity: 0.9;
+    z-index: 999;
+    -webkit-transition: opacity 0.2s ease-out;
+    -webkit-transform: translate3d(0px,0px,0px);
+}
+
+.nav-bar-container {
+    width: 896px;
+    margin: auto
+}
+
+
+/*
+##############Navigation bar edges
+*/
+.edge-left,
+.edge-right {
+    position: fixed;
+    top: 30px;
+    width: 8px; height: 8px;
+    z-index: 500;
+    opacity: 0.9;
+}
+.edge-left {
+    left: 0;
+    background-image: url(../images/nav/edge-left.png)
+}
+.edge-right {
+    right: 0;
+    background-image: url(../images/nav/edge-right.png)
+}
+
+/*
+#####################################################################
+Navigation buttons
+#####################################################################
+*/
+.nav-button {
+    display: block; float: right;
+    width: 30px; height: 30px;
+    margin-bottom: 2px; margin-left: 0px;
+    background-color: transparent;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    background-repeat: no-repeat;
+    font-family: 'PTSerifRegular';
+    overflow: hidden;
+    white-space: nowrap;
+}
+.nav-button:hover {
+    width: 20px; height: 23px;
+    padding-top: 7px; padding-right: 10px;
+    background-color: #000; color: #fff;
+    text-align: right; text-decoration: none;
+    overflow: visible;
+
+}
+.nav-button div.toc-list,
+.nav-button span.toc-dossier {    display: none }
+
+.nav-button:hover div.toc-list,
+.nav-button:hover span.toc-dossier {    display: block }
+.nav-button:hover div {
+    display: block;
+    text-align: left
+}
+.nav-button:hover p {
+    display: block;
+    margin-right: 20px
+}
+.nav-button span,
+.nav-button div {    display: none }
+.nav-button-text {
+    width: 130px;
+    margin-top: 23px;
+    padding: 10px;
+    background-color: #000;
+    opacity: 1;
+    -webkit-box-shadow: 2px 2px rgba(0,0,0,0.2);
+}
+a.nav-button:firstChild {
+    margin-top: 0px; margin-left: 0px
+}
+.nav-button.toc {
+    margin-right: -28px;
+    padding-top: 7px;
+    text-align: right;
+    background-image: url(../images/nav/toc-active.png);
+    background-position: top right;
+}
+.nav-button.toc:hover {
+    width: 421px; height: 23px;
+    padding-right: 15px !important;
+    background-image: url(../images/nav/toc-active.png)
+}
+.toc-label {
+    padding-right: 20px !important;
+    text-align: right !important
+}
+.nav-button.cover {
+    position: fixed; float: left;
+    background-image: url(../images/nav/cover-active.png);
+    z-index: 2999;
+	display:block;
+	margin:0px;
+}
+.nav-button.cover .nav-button-text {    width: 45px }
+.nav-button.cover:hover {    background-image: url(../images/nav/cover-active.png) }
+.nav-button.next {
+    position: fixed;
+    margin-left: 65px;
+    z-index: 1999;
+    background-image: url(../images/nav/next-active.png);
+	
+}
+.nav-button.next .nav-button-text {    width: 90px }
+.nav-button.next:hover {    background-image: url(../images/nav/next-active.png) }
+.nav-button.prev {
+    position: fixed;
+    margin-left: 36px;
+    z-index: 1999;
+    background-image: url(../images/nav/prev-active.png);
+}
+.nav-button.prev .nav-button-text {    width: 120px }
+.nav-button.prev:hover {    background-image: url(../images/nav/prev-active.png) }
+.logo-small {
+    position: fixed;
+    left: 46%;
+    width: 80px;
+    padding-top: 6px;
+    text-align: center;
+    z-index: 1500;
+    opacity: 0.3;
+}
+/*
+#####################################################################
+Table of content on desktop browsers
+#####################################################################
+*/
+
+/*
+############ Customizing the scroll bar color in webkit browsers
+*/
+
+.toc-list::-webkit-scrollbar-button:start:decrement,
+.toc-list::-webkit-scrollbar-button:end:increment {    display: block }
+.toc-list::-webkit-scrollbar-resizer:vertical {    background-color: gray }
+.toc-list::-webkit-scrollbar-corner:vertical {    background-color: black }
+.toc-list::-webkit-scrollbar-button:vertical {    background-color: 000 }
+.toc-list::-webkit-scrollbar-button:vertical:start:increment,
+.toc-list::-webkit-scrollbar-button:vertical:end:decrement {    display: none }
+.toc-list::-webkit-scrollbar-button:vertical:increment {
+    height: 0px;
+    background-color: purple
+}
+.toc-list::-webkit-scrollbar-button:vertical:decrement {
+    height: 0px;
+    background-color: purple
+}
+.toc-list::-webkit-scrollbar-thumb:vertical {
+    height: 50px;
+    background-color: #77f9ae
+}
+.toc-list::-webkit-scrollbar-track:vertical {    background-color: blue }
+.toc-list::-webkit-scrollbar-track-piece {    background-color: #333 }
+.toc-list::-webkit-scrollbar-track-piece:vertical:start {     }
+.toc-list::-webkit-scrollbar-track-piece:vertical:end {     }
+.toc-list .toc-dossier-number {
+    position: absolute; float: right;
+    right: 10px;
+    width: 110px;
+    color: #ffffff;
+    font-size: 8em;
+    text-align: right !important;
+    font-family: "Oswald";
+    z-index: 1;
+    opacity: 0.2;
+}
+.toc-list::-webkit-scrollbar {
+    width: 7px; height: 6px;
+    margin-left: -1px
+}
+
+
+/*
+############ Customizing the pop up list view
+*/
+
+.toc-list {
+    width: 420px; height: 420px;
+    margin-top: 6px; margin-right: -10px;
+    background-color: #000;
+    border-top: 1px solid #000;
+    white-space: normal;
+    overflow: auto;
+    border: 8px solid #000;
+    -webkit-box-shadow: 2px 2px rgba(0,0,0,0.2);
+    -webkit-transform: translate3d(0px,0px,0px);
+}
+
+
+.toc-list .toc-dossier p {
+    position: relative; display: block;
+    z-index: 100
+}
+.toc-list h1 {
+    margin-bottom: 0px;
+    color: #fff;
+    font-family: 'Oswald'
+}
+.toc-list p {
+    color: efefef;
+    text-transform: none;
+    -webkit-transition: color 0.2s ease-out
+}
+.toc-dossier {
+    position: relative; display: block; float: left;
+    width: 96%; height: 120px;
+    padding: 2%;
+    background-color: #000;
+    border-bottom: 1px solid #333;
+    text-decoration: none;
+    opacity: 1;
+    -webkit-transition: opacity 0.2s ease-in;
+    z-index: 3;
+}
+.toc-dossier:hover {
+    opacity: 1;
+    -webkit-transition: opacity 0.2s ease-out;
+}
+.toc-dossier:hover h1 {
+    color: #77f9ae;
+    -webkit-transition: color 0.2s ease-out
+}
+.toc-dossier:hover p {
+    color: #fff;
+    -webkit-transition: color 0.2s ease-out
+}
+.toc-dossier h1 {
+    margin-top: 10px; margin-bottom: 15px;
+    font-size: 1.9em;
+    line-height: 1em !important
+}
+.toc-dossier p {    line-height: 1.2em !important }
+.toc-thumb {
+    float: left;
+    margin-top: 3px; margin-right: 20px;
+    border: 3px solid #333
+}
+
+
+/*
+#####################################################################
+Table of content on iOS devices
+#####################################################################
+*/
+body.body-toc-ios {
+    width: 1640px;/* The width must be number of table of content entries * width of entry (410px)*/
+    margin: 0px; padding: 0px;
+    background-color: #000;
+    
+}
+.toc-list-ios {
+    height: 197px;
+    margin-top: 0px; margin-right: 0px;
+    padding: 0px;
+    border-top: 3px solid #77f9ae;
+    white-space: normal
+}
+.toc-list-ios .toc-dossier-number {
+    position: absolute;
+    margin-top: -60px; margin-left: -35px;
+    font-size: 8em;
+    font-family: "Oswald";
+    z-index: -5;
+    opacity: 0.4;
+}
+.toc-list-ios .toc-dossier {
+    display: block; float: left;
+    width: 349px; height: 117px;
+    margin-top: 0px; margin-right: 0px;
+    padding: 40px;
+	padding-right: 20px;
+    background-color: transparent; color: #efefef;
+    border-right: 1px solid #333333; border-bottom: 0px solid #333;
+    opacity: 1;
+    white-space: normal;
+}
+.toc-list-ios .toc-dossier:last-child {
+    width: 350px;
+    border-right: 0px solid #000
+}
+.toc-list-ios .toc-dossier:hover h1 {
+    color: #fff;
+    : 
+}
+
+.toc-list-ios .toc-dossier p {    color: #9a9a9a }
+.toc-list-ios h1 {
+    margin-top: 5px; margin-bottom: 0px; margin-bottom: 12px;
+    color: #fff;
+    font-size: 1.2em;
+    font-family: 'Oswald';
+    line-height: 1.1em;
+}
+.toc-list-ios p {
+    color: efefef !important;
+    font-size: 1em;
+    text-transform: none;
+    line-height: 1.2em !important
+}
+
+
+/*
+##########################################################################
+##########################################################################
+		Tablet Layout: 768px.
+		Content-Element width: 712px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    
+##########################################################################
+##########################################################################
+*/
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) { 
+	.nav-bar-container {
+	    width: 768px;
+	    margin: auto
+	}
+	
+	.nav-button.toc {
+    margin-right: 0px;
+  
+}
+}
+
+
+/*
+#####################################################################
+Hide navigation bar on iOS devices
+#####################################################################
+*/
+
+
+
+
+/*
+##########################################################################
+##########################################################################
+		iPad Layout Portrait: 768px.
+		Content-Element width: 712px.
+		Gutters: 24px.
+		Outer content margins: 28px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712   
+##########################################################################
+##########################################################################
+ */
+ 
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) { 
+	.nav-bar,
+	.edge-left,
+	.edge-right,
+	.logo-small,
+	.nav-button.cover,
+	.nav-container,
+	.nav-button {    display: none }
+}
+
+
+/*
+##########################################################################
+##########################################################################
+		iPad Layout Landscape: 1024px.
+		Content-Element width: 896px.
+		Gutters: 24px.
+		Outer content margins: 64px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    
+##########################################################################
+##########################################################################
+*/
+
+
+@media only screen and (max-device-width: 1024px) and (orientation:landscape) { 
+	.nav-bar-container {
+	    display: none;
+	    width: 1024px;
+	    margin: auto
+	}
+	.nav-bar,
+	.edge-left,
+	.edge-right,
+	.logo-small,
+	.nav-button.cover,
+	.nav-container,
+	.nav-button {    display: none }
+}
+
+
+/*
+##########################################################################
+##########################################################################
+		Mobile Layout: 320px.
+		Content-Element width: 292px.
+		Gutters: 24px.
+		Outer content margins: 14px.
+		Inherits styles from: Default Layout.
+##########################################################################
+cols    1     2      3
+px      68    160    252    
+##########################################################################
+##########################################################################
+*/
+
+
+@media only screen and (max-width: 767px) { 
+	.nav-bar,
+	.edge-left,
+	.edge-right,
+	.logo-small,
+	.nav-button.cover,
+	.nav-container,
+	.nav-button,
+	.nav-bar {    display: none }
+}
