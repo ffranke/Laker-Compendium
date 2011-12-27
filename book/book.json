@@ -1,0 +1,27 @@
+{
+    "hpub": 1,
+    "title": "Laker Example",
+    "author": ["Florian Franke"],
+    "creator": ["Florian Franke"],
+    "date": "2011-12-27",
+    "url": "book://lakercompendium.com/book/",
+
+    "orientation": "both",
+    "zoomable": false,
+
+    "-baker-background": "#fff",
+    "-baker-vertical-bounce": true,
+    "-baker-index-height": 200,
+    "-baker-media-autoplay": true,
+    "-baker-background-image-portrait": "images/background-portrait.png",
+    "-baker-background-image-landscape": "images/background-landscape.png",
+    "-baker-page-numbers-color": "#333",
+
+    "contents": [
+        "Cover.html",
+        "Introduction.html",
+        "Interactivity.html",
+        "Structure_and_Columns.html",
+        "Maps.html"
+     ]
+}
