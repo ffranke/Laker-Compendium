@@ -1,7 +1,7 @@
-Laker is a compendium of files, frameworks, styles and tips for designing digital publications in HTML5.
+# Laker is a compendium of files, frameworks, styles and tips for designing digital publications in HTML5.
 
 
-CORE FEATURES
+## CORE FEATURES
 Distribute your publication as an app for iPhone and iPad. The layout scales automatically depending on screen size and orientation.
 
 - Swipe to change pages
@@ -25,7 +25,4 @@ Distribute your publication as an app for iPhone and iPad. The layout scales aut
 - Build digital magazines, catalogues, slideshows, surveys, conference schedules and everything else you can imagine.
 
 
-florian@lakercompendium.com
-http://www.colorshift.de
-http://www.franke-photography.com
-@ffranke1985
+florian@lakercompendium.com _ http://www.colorshift.de _ http://www.franke-photography.com _ Twitter: @ffranke1985
