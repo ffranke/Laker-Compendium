@@ -36,7 +36,7 @@ META information ###########################################################
 
 
 <!--Title. The content of the title is displayed on the loading screen on iOS devices-->
-<title>Dossier 1 • Images & slideshow</title>
+<title>Dossier 4 • Google Maps</title>
 
 <!--
 ############################################################################
@@ -48,7 +48,7 @@ Stylesheets ################################################################
 <link href="styles/styles.css" rel="stylesheet" type="text/css" />
 
 <!--Loading the dossier specific css-->
-<link href="styles/dossiers/01.css" rel="stylesheet" type="text/css" />
+<link href="styles/dossiers/04.css" rel="stylesheet" type="text/css" />
 
 <!--
 ############################################################################
@@ -107,18 +107,18 @@ Start dossier navigation in navigation bar #################################
 <!--Include the small logo and the cover link-->
 <div id="includeLogoAndCoverlink" csi:src="inc/logo-coverlink.html"></div>
 
-<!--Link to the next dossier-->
+<!--Link to the next dossier. It's the last page, so we don't need that one.
 <a href="02.html" class="nav-button next">
 	<div class="nav-button-text">Next Dossier</div>
-</a>
-
-<!--Link to the previous dossier. It's the first page, so we don't need that one.
-<a href="001.html" class="nav-button prev">
-	<div class="nav-button-text">Previous Dossier</div>
 </a>-->
 
+<!--Link to the previous dossier-->
+<a href="Structure_and_Columns.html" class="nav-button prev">
+	<div class="nav-button-text">Previous Dossier</div>
+</a>
+
 <!--Implementing the Dossier-Number-->
-<div id="dossier-number" class="dossier-number"><p>01</p></div>
+<div id="dossier-number" class="dossier-number"><p>04</p></div>
 
 <!--Navigation bar edges-->
 <div class="edge-left"></div>
@@ -153,96 +153,21 @@ Start content ##############################################################
 <div class="content-element">
         <!--Starting Headline-->
         <div class="starting-headline">
-              <h1>This is built with <em>Laker</em> – <br />  A compendium for building digital magazines with HTML5</h1>
+              <h1>Implementing GoogleMaps</h1>
         </div><!--Div starting headline-->
 </div><!--Div content element-->
 
 <!--Main content-->
 
-<!--"content-element" ensures, that content is placed within the right margins-->
+
 <div class="content-element">
+              <p>Just paste the embed code of GoogleMaps into the HTML-Code and adjust the width to 100%. That's it!</p>
+</div><!--Div content element-->
 
 
-<div class="large-column float-left">
-<p><em>Laker</em> is built on top of the <a href="http://www.bakerframework.com" target="_blank">Baker ebook Framework</a> and the <a href="http://www.lessframework.com" target="_blank">Less CSS Framework</a>. Basically it's a set of files, styles, tips and tricks for building digital publications with HTML5.</p>
-
-<p>This publication demonstrates the main features of <em>Laker</em>. Take a look at the code and the documentation on <a href="http://www.lakercompendium.com" target="_blank">www.lakercompendium.com</a> to see how it's done. It's not that hard! ;) <br />
-</p>
-<hr /><br /></p>
-</div><!--Div large-column float-left-->
+<iframe width="100%" height="480" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.google.de/maps?f=q&amp;source=s_q&amp;hl=de&amp;geocode=&amp;q=new+york+city&amp;sll=51.151786,10.415039&amp;sspn=22.197694,37.353516&amp;vpsrc=6&amp;t=h&amp;ie=UTF8&amp;hq=&amp;hnear=New+York+City,+New+York,+Vereinigte+Staaten&amp;ll=40.734251,-74.010086&amp;spn=0.249745,0.439453&amp;z=11&amp;iwloc=A&amp;output=embed"></iframe>
 
 
-
-<div class="large-column float-left">
-<h1>Images &amp; slideshow</h1>
-      <h2>Image in text (right)</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas velit tortor, ullamcorper id laoreet vel, ultricies ut lorem. Curabitur porta orci ut lacus vestibulum porttitor. Suspendisse potenti. Donec sodales ante eu dui molestie euismod ultricies nisl sollicitudin. Phasellus eget mauris eu velit mollis consectetur a in elit. Pellentesque eu lorem nunc. Integer eu elit massa. Morbi vestibulum lacus a quam sagittis pulvinar tristique arcu posuere. Aliquam sollicitudin risus risus, at semper neque. Aliquam rhoncus rhoncus ultrices.</p>
-      
-      <div class="media-right">
-      <img src="images/dossier-01/image-in-text.jpg" width="400" height="600" /></div>
-      
-      <p> Aliquam erat volutpat. Aenean in nibh vitae leo placerat viverra. Pellentesque non sapien ac orci fermentum molestie in vitae purus. Cras lacinia turpis nec orci blandit adipiscing. Morbi tempor commodo leo, quis scelerisque risus pretium quis. Cras suscipit magna eget tortor sagittis fringilla. Praesent arcu justo, ultrices eu interdum nec, ornare aliquam urna. Vivamus cursus posuere erat id faucibus.</p>
-      <p>Morbi semper ultrices porta. Aenean dignissim, sapien eget sodales mollis, massa urna malesuada elit, sit amet vulputate justo augue in massa. Praesent mattis accumsan blandit. Mauris nec enim ante. Sed fringilla interdum eros, nec lacinia turpis iaculis vel. Vestibulum leo ipsum, consequat a dignissim sit amet, egestas in urna. Donec nisl velit, pulvinar id ullamcorper vitae, imperdiet et leo. Donec ultricies cursus varius. Pellentesque elit arcu, pulvinar in fermentum non, faucibus eu quam. Suspendisse mollis aliquam sagittis. Vestibulum pellentesque accumsan arcu, vitae mattis tellus luctus id. Vivamus sed condimentum leo.</p>  
-</div><!--Div large-column float-left-->
-
-
-  <div class="large-column float-right">
-      <h2>Image in text (left)</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas velit tortor, ullamcorper id laoreet vel, ultricies ut lorem. Curabitur porta orci ut lacus vestibulum porttitor. Suspendisse potenti. Donec sodales ante eu dui molestie euismod ultricies nisl sollicitudin. Phasellus eget mauris eu velit mollis consectetur a in elit. Pellentesque eu lorem nunc. Integer eu elit massa. Morbi vestibulum lacus a quam sagittis pulvinar tristique arcu posuere. Aliquam sollicitudin risus risus, at semper neque. Aliquam rhoncus rhoncus ultrices.</p>
-      
-      <div class="media-left">
-      <img src="images/dossier-01/image-in-text.jpg" width="400" height="600" /></div>
-      
-      <p> Aliquam erat volutpat. Aenean in nibh vitae leo placerat viverra. Pellentesque non sapien ac orci fermentum molestie in vitae purus. Cras lacinia turpis nec orci blandit adipiscing. Morbi tempor commodo leo, quis scelerisque risus pretium quis. Cras suscipit magna eget tortor sagittis fringilla. Praesent arcu justo, ultrices eu interdum nec, ornare aliquam urna. Vivamus cursus posuere erat id faucibus.</p>
-      <p>Morbi semper ultrices porta. Aenean dignissim, sapien eget sodales mollis, massa urna malesuada elit, sit amet vulputate justo augue in massa. Praesent mattis accumsan blandit. Mauris nec enim ante. Sed fringilla interdum eros, nec lacinia turpis iaculis vel. Vestibulum leo ipsum, consequat a dignissim sit amet, egestas in urna. Donec nisl velit, pulvinar id ullamcorper vitae, imperdiet et leo. Donec ultricies cursus varius. Pellentesque elit arcu, pulvinar in fermentum non, faucibus eu quam. Suspendisse mollis aliquam sagittis. Vestibulum pellentesque accumsan arcu, vitae mattis tellus luctus id. Vivamus sed condimentum leo.</p>  
-</div><!--Div large-column float-right-->
-
-  
-
-<div class="large-column float-left">
-      <h2>Slideshow</h2>
-</div><!--Div dossier float-left-->
-</div><!--Div content-element-->
-
-<!--
-############################################################################
-ImageSlideshow #############################################################
-############################################################################
--->
-
-<div id="imgscroll-content">
-<div id="imgscroll-legend"><p>» Swipe for more pictures.</p></div>
-<div id="imgscroll-imgs">
-
-<!--Picture 1-->
-<div class="imgscroll-img" id="imgscroll-img">
-	<img src="images/dossier-01/nyc1.jpg" />
-	<div class="caption"><p>New York City #1</p></div>
-</div><!--imgscroll-content-->
-
-<!--Picture 2-->
-<div class="imgscroll-img" id="imgscroll-img">
-	<img src="images/dossier-01/nyc2.jpg" />
-	<div class="caption"><p>New York City #2</p></div>
-</div><!--imgscroll-content-->
-
-<!--Picture 3-->
-<div class="imgscroll-img" id="imgscroll-img">
-	<img src="images/dossier-01/nyc3.jpg" />
-	<div class="caption"><p>New York City #3</p></div>
-</div><!--imgscroll-content-->
-
-</div><!--Div imgscroll-imgs-->
-</div><!--Div imgscroll-content-->
-
-<!--Initiating the slideshow by calling the JS-->
-<script src="js/imgscroll.js" type="text/javascript"></script>
-
-<!--
-############################################################################
-ImageSlideshow End #########################################################
-############################################################################
--->
 
 
   <!--
