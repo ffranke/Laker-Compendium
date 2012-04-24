@@ -295,7 +295,8 @@ Table of content on iOS devices
 #####################################################################
 */
 body{
-    background-color: #000;	
+    background-color: #000;
+    overflow-y: hidden;
 }
 
 .body-toc-ios {
