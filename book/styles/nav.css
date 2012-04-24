@@ -294,11 +294,31 @@ Table of content on desktop browsers
 Table of content on iOS devices
 #####################################################################
 */
-body.body-toc-ios {
-    width: 2050px;/* The width must be number of table of content entries * width of entry (410px)*/
+
+body.body-toc-ios{
+	 background: #000 !important;
+	 overflow-x: auto !important;
+	 overflow-y: hidden;
+	 height: !important;
+	 margin: 0!important;
+	 width: 100% !important;
+}
+
+.wrapper-toc-ios {
+	display: block;
+	min-width: 1024px;
+    width: 820px;/* The width must be number of table of content entries * width of entry (410px)*/
     margin: 0px; padding: 0px;
     background-color: #000;
     
+}
+.toc-list-ios {
+    height: 197px;
+    margin-top: 0px; margin-right: 0px;
+    padding: 0px;
+    border-top: 3px solid #FFFFFF;
+    white-space: normal;
+    width:100%;
 }
 .toc-list-ios {
     height: 197px;
