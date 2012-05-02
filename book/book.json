@@ -11,7 +11,7 @@
 
     "-baker-background": "#fff",
     "-baker-vertical-bounce": true,
-    "-baker-index-height": 200,
+    "-baker-index-height": 205,
     "-baker-media-autoplay": true,
     "-baker-background-image-portrait": "images/background-portrait.png",
     "-baker-background-image-landscape": "images/background-landscape.png",
