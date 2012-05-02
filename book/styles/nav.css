@@ -300,7 +300,7 @@ body.body-toc-ios {
     background-color: #000;
     overflow-y: hidden;
     overflow-x: auto;
-
+    height: !important;
     
 }
 .toc-list-ios {
