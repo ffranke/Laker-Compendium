@@ -45,7 +45,7 @@ object, param, embed {width:100% !important; height:200px; !important;}
 	
 	}
 
-.small-column img, medium-column img {
+.small-column img, .medium-column img, .full-column img, .large-column img {
 	width:100%;
 	height:auto;
 	}
